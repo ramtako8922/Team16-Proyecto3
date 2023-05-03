@@ -1,10 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
 
 body {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-    
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 a {
     text-decoration: none;
@@ -64,7 +84,7 @@ nav .profile-link {
 }
 nav .profile-link a {
     color: black;
-    border-bottom: 1px solid black;
+    
     margin: 0 10px 0 10px;
 }
 
@@ -119,84 +139,13 @@ header{
    
 }
 
-.blogs-main {
-    display: grid;
-}
-.blogs-news-container {
-    background-color: #e6e9ed;
-    padding: 0 50px 40px;
-    margin-top: 30PX;
-}
-.blogs-main-new {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr;
-}
-.blogs-news-img-container {
-    grid-column: 1;
-}
-.blogs-news-img-container img {
-    width: 85%;
-}
-.blogs-news-info-container {
-    grid-column: 2;
-}
-.blogs-news-info-container p {
-    margin-bottom: 35px;
-}
-.blogs-posts-container {
-    padding: 0 50px 40px;
-}
-.blogs-posts-container h3 {
-    border-bottom: 1px solid #cdd2da;  
-    padding-bottom: 20px;
-    text-align: center;
-}
-.blogs-button {
-    border: 2px solid #4787cf;
-    padding: 10px 15px;
-    font-size: 12px;
-    border-radius: 5px;
-    margin-right:100px;
-}
-
-.blogs-button1 {
-    border: 2px solid #47cfac;
-    padding: 10px 15px;
-    font-size: 12px;
-    border-radius: 5px;
-    margin-right:100px ;
-
-}
-.blogs-button2 {
-    border: 2px solid #cf6047;
-    padding: 10px 15px;
-    font-size: 12px;
-    border-radius: 5px;
-}
-    
-
-
-.blogs-posts-container .post-container {
-    display: inline-block;
-    padding-left: 10px;
-    max-width: 30%;
-    margin-bottom: 50px;
-}
-.blogs-posts-container .post-container p {
-    margin-bottom: 35px;
-}
-.blogs-posts-container .post-container img {
-    width: 100%;
-}
 
 
 
 footer {
     width: 100%;
-    height: 80px;
+    height: 120px;
     background-color: #22272d;
-    border-top: 35px solid #172768;
     text-align: center;
     
 }
@@ -205,9 +154,12 @@ footer p {
     margin-top: 30px;
 }
 
-.img-fotter{
-    background-image: url("../assets/img/aA1.jpg");
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
+
 
 .blogpost-img-container {
     padding: 0 50px 40px;
@@ -286,4 +238,13 @@ footer p {
 .table-head{
     background-color: #172768;
     color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
