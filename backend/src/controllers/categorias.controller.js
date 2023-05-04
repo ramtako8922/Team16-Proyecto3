@@ -1,4 +1,5 @@
 import * as categoriasServices from "../services/categorias.services.js";
+
 //Metodo del controlador de categirias que trae todas las categorias de las de la base de datos
 export const getCategorias = (req, res) => {
   categoriasServices
@@ -10,6 +11,7 @@ export const getCategorias = (req, res) => {
       res.status(500).send(err);
     });
 };
+
 //Metodo del controlador de categirias que trae una categoria creada en la base de datos de acuerdo al id de esta
 export const getCategoria = (req, res) => {
   const { id } = req.params;
@@ -22,6 +24,7 @@ export const getCategoria = (req, res) => {
       res.status(500).send(err);
     });
 };
+
 //Metodo del controlador de categirias que envia una solicitud post para crear una categoría
 export const createCategorias = (req, res) => {
   const categoria = req.body;
@@ -40,7 +43,7 @@ export const createCategorias = (req, res) => {
 
 
 
-//Metodo del controlador de categirias que envia una solicitud put para actualizar una categoria una categoría
+//Metodo del controlador de categirias que envia una solicitud put para actualizar conociendo su id
 
 export const updateCategorias = (req, res) => {
   const categoria = req.body;

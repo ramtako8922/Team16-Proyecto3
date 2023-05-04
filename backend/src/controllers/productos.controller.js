@@ -42,6 +42,8 @@ export const createProductos = (req, res) => {
     });
 };
 
+//Metodo del controlador de productos que envia una solicitud put para actualizar un producto de acuerdo a su id
+
 export const updateProductos = (req, res) => {
   const producto = req.body;
   const { id } = req.params;
