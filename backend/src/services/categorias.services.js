@@ -1,5 +1,7 @@
 import db from "../config/db.js";
 
+//Servicio que trae todas las categorías de la base de datos
+
 export const getCategorias = () => {
   return new Promise((resolve, reject) => {
     const query = "SELECT * FROM categoria";
@@ -12,7 +14,7 @@ export const getCategorias = () => {
       });
   });
 };
-
+//Servicio que trae una categoria de acuerdo a su id
 export const getCategoria = (id) => {
   return new Promise((resolve, reject) => {
     const query = "SELECT * FROM categoria WHERE id_categoria=?";
@@ -26,6 +28,8 @@ export const getCategoria = (id) => {
   });
 };
 
+
+//Servicio que crea una categoria en la base de datos
 export const createCategorias = (categoria) => {
     return new Promise((resolve, reject) => {
       const query = "INSERT INTO categoria (nombre) VALUES (?)";
@@ -40,6 +44,8 @@ export const createCategorias = (categoria) => {
     });
   };
 
+
+  //Servicio que actualiza una  categorías de la base de datos
   export const updateCategorias = (id,categoria) => {
     return new Promise((resolve, reject) => {
       const query = "UPDATE categoria SET nombre =? WHERE id_categoria = ?";
@@ -54,6 +60,7 @@ export const createCategorias = (categoria) => {
     });
   };
 
+  //Servicio que borra una categoria de la base de datos de acuerdo a su id
   export const deleteCategorias = (id) => {
     return new Promise((resolve, reject) => {
       const query = "DELETE FROM categoria WHERE id_categoria = ?";

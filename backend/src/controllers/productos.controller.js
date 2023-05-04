@@ -5,7 +5,7 @@ export const getProductos = (req, res) => {
   productosServices
     .getProductos()
     .then((result) => {
-      res.status(201).json(result[0]);
+      res.status(200).json(result[0]);
     })
     .catch((err) => {
       res.status(500).send(err);
@@ -50,7 +50,7 @@ export const updateProductos = (req, res) => {
   productosServices
     .updateProductos(id, producto)
     .then(() => {
-      res.status(200).json({
+      res.status(201).json({
         message: "producto updated successfully...",
         data: producto,
       });

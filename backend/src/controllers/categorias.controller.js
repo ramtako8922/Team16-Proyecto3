@@ -5,7 +5,7 @@ export const getCategorias = (req, res) => {
   categoriasServices
     .getCategorias()
     .then((result) => {
-      res.status(201).json(result[0]);
+      res.status(200).json(result[0]);
     })
     .catch((err) => {
       res.status(500).send(err);
@@ -18,7 +18,7 @@ export const getCategoria = (req, res) => {
   categoriasServices
     .getCategoria(id)
     .then((result) => {
-      res.status(201).json(result[0]);
+      res.status(200).json(result[0]);
     })
     .catch((err) => {
       res.status(500).send(err);
@@ -31,7 +31,7 @@ export const createCategorias = (req, res) => {
   categoriasServices
     .createCategorias(categoria)
     .then(() => {
-      res.status(200).json({
+      res.status(201).json({
         message: "categoria created successfully...",
         data: categoria,
       });
@@ -51,7 +51,7 @@ export const updateCategorias = (req, res) => {
   categoriasServices
     .updateCategorias(id, categoria)
     .then(() => {
-      res.status(200).json({
+      res.status(201).json({
         message: "categoria updated successfully...",
         data: categoria,
       });
@@ -68,7 +68,7 @@ export const deleteCategorias = (req, res) => {
   categoriasServices
     .deleteCategorias(id)
     .then(() => {
-      res.status(201).json({
+      res.status(200).json({
         message: "categoria deleted successfully...",
       });
     })
